@@ -314,6 +314,7 @@ SendStream.prototype.notModified = function(){
   this.removeContentHeaderFields();
   res.statusCode = 304;
   res.end();
+  this.emit('end');
 };
 
 /**
